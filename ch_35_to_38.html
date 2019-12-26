@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        var text = 'this is abCd long string';
+        
+
+        var cap = (string) => string[0].toUpperCase() + string.slice(1).toLowerCase();
+
+        var capitalize = (string) => string.split(' ').map(cap).join(' ');
+
+        alert(capitalize(text));
+
+
+
+        ///////////Factorial////////////////
+
+        var n = parseInt(prompt('Enter any number'));
+
+        function factorial(n){
+            if (n >=0 && n <=1)
+            return 1;
+            else{
+                return n * factorial(n-1);
+            }
+        }
+        alert(factorial(n));
+    
+    
+    </script>
+</body>
+</html>

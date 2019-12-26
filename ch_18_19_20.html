@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 18 - 20</title>
+</head>
+<body>
+    
+    <script>
+
+        //creating an empty array
+
+        var courses = [];
+        
+        //Get courses names through loop and push to an array
+
+        for(i = 1; i <= 5; i++ ){
+            
+            courses.push(prompt('Enter course' + ' ' + i));
+        }
+
+        // alert an array 
+
+        alert(courses);
+
+        // alert courses names one by one through loop
+
+        for (i = 0; i< courses.length; i++){
+            alert(courses[i]);
+        }
+
+        // Replace course names in array through loop
+
+        for(i = 0; i < courses.length; i++){
+            courses[i] = prompt('Enter edited course ' + (i + 1), courses[i]);
+        }
+
+        //alert replaced array
+
+        alert(courses);
+        
+        </script>
+</body>
+</html>

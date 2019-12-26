@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 21 to 30</title>
+</head>
+<body>
+    
+    <script>
+        
+        // Get a decimal number
+
+        var decimalNumber = parseFloat(prompt('Enter a decimal number.', 4.4));
+        alert(decimalNumber);
+
+        //Ceil the decimal number
+
+        var numCeil = Math.ceil(decimalNumber);
+        alert(numCeil);
+
+        //Declare a variable 
+
+        var text = 'Hello world, Good Morning.';
+
+        alert(text);
+
+        // Slice the string
+
+        var slicedText = text.slice(0, numCeil);
+
+        alert(slicedText);
+
+        var reversedText = '';
+
+        // reverse the sliced string and concatinate it into an empty string using for loop
+
+        for(i = slicedText.length - 1; i>=0; i--){
+            reversedText = reversedText + slicedText[i];            
+        }
+
+        alert(reversedText);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        //Get input from user
+
+        var english = Number(prompt('Enter english marks'));
+        var urdu = Number(prompt('Enter urdu marks'));
+        var maths = Number(prompt('Enter maths marks'));
+        var science = Number(prompt('Enter science marks'));
+        var biology = Number(prompt('Enter biology marks'));
+
+        var totalMarks = 500;
+
+        var obtainedMarks = english + urdu + maths + science + biology;
+
+        var percentage = obtainedMarks * 100 / totalMarks;
+
+        alert(percentage)
+
+        switch(true){
+            case (percentage >= 90 && percentage <= 100):
+                alert('You got A+ Grade');
+                break;
+            case (percentage >= 80 && percentage <= 90):
+                alert('You got A Grade');
+                break;
+            case (percentage >= 70 && percentage <= 80):
+                alert('You got B Grade');
+                break;
+            case (percentage >= 60 && percentage <= 70):
+                alert('You got C Grade');
+                break;
+            case (percentage >= 40 && percentage <= 60):
+                alert('You got E Grade');
+                break;
+            case(percentage >= 0 && percentage <= 40):
+                alert('You are Fail. Please study hard.');
+                break;
+            default: 
+                alert('Enter valid marks');
+        }
+        
+    
+    
+    </script>
+</body>
+</html>

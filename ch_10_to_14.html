@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 10-14</title>
+</head>
+<body>
+    
+    <script>
+        
+        // Get input 
+
+        var num1 = Number(prompt('Enter first value'));
+        var operator = prompt('Enter operator');
+        var num2 = Number(prompt('Enter second value'));
+        
+        
+        // if Statement
+
+        if(operator === '+'){
+            var sum = num1 + num2;
+            alert(num1 + ' + ' + num2 + ' ' + '=' + ' ' + sum);
+        }
+        else if(operator === '-'){
+            var subtract = num1 - num2;
+            alert(num1 + ' - ' + num2 + ' ' + '=' + ' ' + subtract);
+        }
+        else if(operator === '*'){
+            var multiply = num1 * num2;
+            alert(num1 + ' * ' + num2 + ' ' + '=' + ' ' + multiply);
+        }
+        else if(operator === '/'){
+            var divide = num1 / num2;
+            alert(num1 + ' / ' + num2 + ' ' + '=' + ' ' + divide);
+        }
+        else if(operator === '%'){
+            var modulus = num1 % num2;
+            alert(num1 + ' % ' + num2 + ' ' + '=' + ' ' + modulus);
+        }
+        else{
+            alert('Please fill the prompt correctly.');
+        }
+        
+    </script>
+
+</body>
+</html>

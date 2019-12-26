@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date of birth calculator</title>
+</head>
+<body>
+    <script>
+    
+
+    // To get Date of Birth in standard form
+
+   
+    var name = prompt('Please enter your full name. ex. John Doe');
+     var date = Number(prompt('Enter your birth date. ex: 20'));
+    var month = Number(prompt('Enter your birth month. ex: 05'));
+    var year = Number(prompt('Enter your birth year. ex: 1995'));
+    // To get current Date
+    var currentDate = new Date();
+    
+    var currentHours = currentDate.getHours();
+    
+        // Display message according to current hours
+
+    if(currentHours >= 00 && currentHours <= 04){
+        console.log('Hello ' + name + ', Good Night')
+    }
+    else if(currentHours >= 05 && currentHours <= 10){
+        console.log('Hello ' + name + ', Good Morning, Have a good day ahead')
+    }
+    else if(currentHours >= 11 && currentHours <= 15){
+        console.log('Hello ' + name + ', Good Afternoon')
+    }
+    else if(currentHours >= 16 && currentHours <= 19){
+        console.log('Hello ' + name + '. Good Evening')
+    }
+    else if(currentHours >= 20 && currentHours <= 23){
+        console.log('Hello ' + name + ', Good Night')
+    }
+    else{
+        console.log('Hello ' + name)
+    }
+
+    ///////////////////////////////////////////////////
+    
+    // To get Date of Birth in standard form
+    var dob = new Date(year,(month -1), date);
+    console.log('Your date of birth is ' +dob);
+
+    var nextbday = new Date((currentDate.getFullYear() + 1), (month -1), date)
+       
+    // Conversion
+    var myDiff = currentDate.getTime() - dob.getTime();
+    var days = Math.floor(myDiff / (1000 * 60 * 60 *24 ))
+    var totalyear = currentDate.getFullYear() - dob.getFullYear();
+    var totalmonth = currentDate.getMonth() - dob.getMonth();
+    var totaldate = currentDate.getDate() - dob.getDate();
+    var totalHours = currentDate.getHours() - dob.getHours();
+    var totalMinutes = currentDate.getMinutes() - dob.getMinutes();
+    var totalSeconds = currentDate.getSeconds() - dob.getSeconds();
+
+
+    console.log('----------------------')
+
+    // Next birthdate calculation
+
+    var next_myDiff = nextbday.getTime() - currentDate.getTime();
+    var nextDays = Math.floor(next_myDiff / (1000 * 60 * 60 *24 ))
+
+    /////////////////////////////////////////////////
+    
+    // To change the negative date in positive
+
+    var getDaysInMonth = function(month,year){
+        return new Date(year, month, 0).getDate();
+    }
+    if(dob.getDate() > currentDate.getDate()){
+        totalmonth = totalmonth - 1;
+        totaldate = totaldate + (getDaysInMonth(month, year))  ;
+    }
+
+    //////////////////////////////////////////////////
+
+    //Console logs
+    
+    console.log('You are ' + totalyear + ' years ' + totalmonth + ' months ' + totaldate + ' days ' + totalHours + ' hours ' + totalMinutes + ' minutes ' + totalSeconds + ' seconds old.')
+
+    console.log('Your age in days is ' + days + '.');
+
+    if(currentDate.getDate() === dob.getDate() && currentDate.getMonth() === dob.getMonth()){
+        console.log('Happy Brthday ' + name);
+        }
+        else{
+            console.log('Your next birthday duration is ' + nextDays + ' Days.'  );
+        }
+
+    //////////////////////////////////////////////////////////
+        
+
+    </script>
+</body>
+</html>

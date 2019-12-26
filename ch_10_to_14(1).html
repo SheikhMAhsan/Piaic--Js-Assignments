@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 10-14 (1)</title>
+</head>
+<body>
+    
+    <script>
+    
+        // Get course marks through prompt
+
+        var english = Number(prompt('Enter marks of english. '));
+        var urdu = Number(prompt('Enter marks of urdu. '));
+        var maths = Number(prompt('Enter marks of maths. '));
+        var science = Number(prompt('Enter marks of science. '));
+        var economics = Number(prompt('Enter marks of economics. '));
+
+        //Marks calculation
+
+        var totalMarks = 500;
+        var obtainedMarks = english + urdu + maths + science + economics;
+        var percentage = obtainedMarks * 100/ totalMarks;
+
+        //alert
+
+        alert(percentage);
+    
+    </script>
+</body>
+</html>

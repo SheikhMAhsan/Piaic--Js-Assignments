@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 15-17</title>
+</head>
+<body>
+    
+    <script>
+        
+        //creating an empty array
+
+        var courses = [];
+
+        var course1 = prompt('Enter first course', 'English');
+        var course2 = prompt('Enter second course', 'Urdu');
+        var course3 = prompt('Enter third course', 'Maths');
+        var course4 = prompt('Enter forth course', 'Science');
+        var course5 = prompt('Enter fifth course', 'Economics');
+
+        //Push courses to an array
+
+        courses.push(course1);
+        courses.push(course2);
+        courses.push(course3);
+        courses.push(course4);
+        courses.push(course5);
+
+        alert(courses);
+
+        alert(courses[0]);
+        alert(courses[1]);
+        alert(courses[2]);
+        alert(courses[3]);
+        alert(courses[4]);
+
+        //prompt for different course name 
+
+        course1 = prompt('Enter first course. ' + courses[0]);
+        course2 = prompt('Enter second course.'  + courses[1]);
+        course3 = prompt('Enter third course. '  + courses[2]);
+        course4 = prompt('Enter forth course. '   + courses[3]);
+        course5 = prompt('Enter fifth course. '  + courses[4]);
+
+        //Replace all existing array values to new prompt values.
+
+        courses.splice(0, courses.length, course1, course2, course3, course4, course5);
+
+        alert(courses);
+        
+    </script>
+</body>
+</html>
